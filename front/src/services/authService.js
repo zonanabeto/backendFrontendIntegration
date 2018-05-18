@@ -24,7 +24,8 @@ export function login(userData){
         headers:{
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(userData)
+        body: JSON.stringify(userData),
+        credentials:"include"
     })
     .then(res=>{
         if(!res.ok) return Promise.reject(res);

@@ -29,7 +29,7 @@ const options = {
   credentials:true,
   origin:true
 }
-app.use(require('cors')());
+app.use(require('cors')(options));
 
 app.use(session({
   resave:true,
